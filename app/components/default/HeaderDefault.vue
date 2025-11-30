@@ -17,22 +17,18 @@ const nav = [
     </div>
 
     <nav class="header-items-nav">
-      <NuxtLink
-        v-for="item in nav"
-        :key="item.name"
-        :to="item.path"
-        class="header-item-nav"
-      >
+      <NuxtLink v-for="item in nav" :key="item.name" :to="item.path" class="header-item-nav">
         {{ item.name }}
       </NuxtLink>
     </nav>
 
     <div class="header-actions">
       <button class="btn-login">
-        Login
+        <Icon name="ph:user" size="18" />
       </button>
+
       <button class="btn-cart">
-        Go to cart
+        <Icon name="ph:shopping-cart-simple" size="18" />
       </button>
     </div>
   </div>
@@ -73,7 +69,7 @@ const nav = [
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: #0070f3;
+  background-color: #56B280;
   transition: width 0.2s ease;
 }
 
@@ -87,7 +83,7 @@ const nav = [
 
 /* estado ativo (Nuxt adiciona .router-link-active/.router-link-exact-active) */
 .header-item-nav.router-link-exact-active {
-  color: #0070f3;
+  color: #56B280;
 }
 
 .header-item-nav.router-link-exact-active::after {
@@ -120,7 +116,7 @@ const nav = [
 
 /* cart = filled */
 .btn-cart {
-  background-color: #0070f3;
+  background-color: #56B280;
   color: #fff;
 }
 
